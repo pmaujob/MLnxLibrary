@@ -74,6 +74,10 @@ class ConvertFormats {
         return $fecha;
     }
 
+    public static function formatBDDate($formatDate, $date) {
+        return DateTime::createFromFormat($formatDate, $date)->format('Y-m-d');
+    }
+
     public static function convertToJsonItems($array) {
         if ($array != null && count($array) > 0) {
             $json = json_encode($array, JSON_UNESCAPED_SLASHES);
@@ -83,6 +87,16 @@ class ConvertFormats {
         } else {
             return null;
         }
+    }
+
+    public static function replaceAccent($object) {
+
+        $accents = array("á", "é", "í", "ó", "ú", "Á", "É", "Í", "Ó", "Ú", "ñ", "À", "Ã", "Ì", "Ò", "Ù", "Ã™", "Ã ", "Ã¨", "Ã¬", "Ã²", "Ã¹", "ç", "Ç", "Ã¢", "ê", "Ã®", "Ã´", "Ã»", "Ã‚", "ÃŠ", "ÃŽ", "Ã”", "Ã›", "ü", "Ã¶", "Ã–", "Ã¯", "Ã¤", "«", "Ò", "Ã", "Ã„", "Ã‹");
+        $noAccents = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "n", "N", "A", "E", "I", "O", "U", "a", "e", "i", "o", "u", "c", "C", "a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "u", "o", "O", "i", "a", "e", "U", "I", "A", "E");
+        $text = str_replace($accents, $noAccents, $object);
+
+        echo $text;
+        return $text;
     }
 
 }
