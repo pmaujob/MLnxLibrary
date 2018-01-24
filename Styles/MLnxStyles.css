@@ -3,3 +3,9 @@
     max-height: 35%;
     margin-top: 10%;
 }
+
+.frm-login form{
+    background-color: #FFFFFF;
+    border: solid #3990FE 1px;
+    padding: 36px;
+}
