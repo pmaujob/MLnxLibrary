@@ -7,7 +7,7 @@ class SessionVars {
     }
 
     public function destroy() {
-        session_destroy();
+        @session_destroy();
     }
 
     public function getValue($id) {

@@ -51,6 +51,7 @@ class ConnectionDB {
 
             $pdo->exec($sql);
             $res = 1;
+            
         } catch (PDOException $e) {
             return $e->getMessage();
         }

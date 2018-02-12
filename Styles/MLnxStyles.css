@@ -4,7 +4,13 @@
     margin-top: 10%;
 }
 
-.frm-login form{
+.confirmModal {
+    width: 30%;
+    max-height: 40%;
+    margin-top: 10%;
+}
+
+.frm-login form {
     background-color: #FFFFFF;
     border: solid #3990FE 1px;
     padding: 36px;
